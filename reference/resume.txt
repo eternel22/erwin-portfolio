@@ -1,0 +1,54 @@
+ERWIN DENG
+
+EDUCATION
+MASSACHUSETTS INSTITUTE OF TECHNOLOGY	Cambridge, MA
+Candidate for Master of Business Analytics, Operations Research Center, August 2026, GPA: 5.0/5.0	2025 - Present
+•	Selected Coursework: Machine Learning, Optimization, Advanced Analytics Edge, Hands-on Deep Learning, GenAI Lab, Power and Negotiation, Communication through Data
+ 
+CENTRALESUPELEC, UNIVERSITE PARIS-SACLAY	Paris, France
+Bachelor and Master Degree of Engineering, GPA: 4.0/4.0	2022 - 2024
+•	Coursework: Advanced Statistics, Partial Differential Equations, Software Engineering, Economics, Climate Sciences
+•	Teaching Assistant: Led algorithmics tutorials (graphs, dynamic programming, etc) for 30 first-year undergraduate students
+•	Leadership: Awarded the CentraleSupélec scholarship for involvement in Student Life and Associations
+•	Community involvement: Raised $15,000 and organized a 5-week mission in Nepal supporting children's education
+  
+TECHNICAL SKILLS
+•	Python (PyTorch, Keras, Hugging Face, MLflow, Pandas, Scikit-learn, NumPy, Matplotlib, Streamlit), R, SQL, Julia, Java, C++, Git, FastAPI, HTML/CSS/PHP
+
+EXPERIENCE
+MIT SLOAN / FORD MOTOR COMPANY	Cambridge, MA
+Data Scientist Intern, MIT Capstone Project	2026 - Present
+•	Developing AI models for early defect detection in car assembly lines using images (Python)
+
+MIT SLOAN / BMW GROUP	Cambridge, MA
+Generative AI Lab Team Member	Spring 2026
+•	Built a closed-loop LLM evaluation and prompt optimization pipeline for repair-order document extraction
+•	Developed deterministic and LLM-as-judge evaluation framework in Python to assess structured JSON extraction quality
+•	Improved extraction performance by 50% over five iterations using LLM reflection and Pareto-based prompt evolution
+
+MIT OPERATIONS RESEARCH CENTER	Cambridge, MA
+Graduate Research Assistant for Professor Jacquillat	2025 - 2026
+•	Developed a double ML model to quantify crew effects on wildfires and guide resource deployment decisions (Python)
+•	Expanded a wildfire crew dataset by integrating satellite embeddings and weather data
+ 
+MIT SLOAN / SUFFOLK CONSTRUCTION	Cambridge, MA
+Analytics Lab Team Member	Fall 2025
+•	Developed ML models to predict delays on 200+ construction projects, identifying future losses of $10M+ (Python, SQL)
+ 
+RICHEMONT	Buttes, Switzerland
+World's second-largest luxury group, owning brands such as Cartier, Montblanc, Piaget, and Van Cleef & Arpels
+Data Scientist Intern, Research & Innovation	Spring 2025
+•	Analyzed manually labeled datasets for watch components, identifying issues such as inconsistent labeling
+•	Developed universal defect detection model that works across any watch piece, enabling cost-free assessment (Python)
+•	Presented findings to multiple brands and delivered a production-ready solution (Python)
+ 
+SOCIETE GENERALE	Paris, France
+Data Scientist Intern, Investment Banking	Fall 2024
+•	Fine-tuned AI models on domain-specific data for document structure analysis, improving accuracy for investment banking 
+•	Developed table parsing and reading order identification models to enhance document understanding (Python)
+  
+ADDITIONAL INFORMATION
+•	Algorithmics competitions: Bronze Medal, European Junior Olympiad in Informatics (2017); 1st Prize out of 220,000 in the Algoréa French Computer Science Competition (2019) 
+•	Personal Project: 2nd runner-up out of 11,000 in EY Open Science Data Challenge 2024; fine-tuned computer vision model for storm damage assessment (Python); presented at IEEE IGARSS 2024
+•	Languages: French (native), English (fluent), Chinese (conversational)
+•	Interests: Fencing (organized national student competition in France), Piano, Running
