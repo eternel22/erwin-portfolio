@@ -10,6 +10,7 @@ export const site: SiteInfo = {
     "Before MIT, I studied engineering at CentraleSupélec in France, and worked as a data scientist intern across manufacturing, luxury goods, and investment banking.",
   ],
   location: "Cambridge, MA",
+  photoHref: "/profile.jpeg",
   resumeHref: "/resume.pdf",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/erwin-deng/", icon: "linkedin" },
