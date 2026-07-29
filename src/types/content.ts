@@ -38,6 +38,7 @@ export interface ProjectEntry {
   tech: string[];
   links?: { label: string; href: string }[];
   featured?: boolean;
+  published: boolean;
 }
 
 export interface EducationEntry {

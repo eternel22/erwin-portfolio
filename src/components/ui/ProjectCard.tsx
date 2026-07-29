@@ -11,10 +11,16 @@ export function ProjectCard({ project }: { project: ProjectEntry }) {
     >
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-semibold text-foreground">{project.title}</h3>
-        <ArrowUpRight
-          className="mt-1 h-4 w-4 shrink-0 text-muted transition-colors group-hover:text-accent"
-          aria-hidden
-        />
+        {project.published ? (
+          <ArrowUpRight
+            className="mt-1 h-4 w-4 shrink-0 text-muted transition-colors group-hover:text-accent"
+            aria-hidden
+          />
+        ) : (
+          <span className="shrink-0 rounded-full border border-border px-2.5 py-0.5 text-xs font-medium text-muted">
+            Coming soon
+          </span>
+        )}
       </div>
       {project.org && <p className="mt-1 text-sm text-muted">{project.org}</p>}
       <p className="mt-3 text-sm leading-relaxed text-foreground/90">

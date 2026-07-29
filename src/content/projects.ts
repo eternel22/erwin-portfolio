@@ -3,6 +3,7 @@ import type { ProjectEntry } from "@/types/content";
 export const projects: ProjectEntry[] = [
   {
     id: "bmw-genai-eval",
+    published: false,
     slug: "bmw-genai-evaluation-pipeline",
     title: "Closed-Loop LLM Evaluation & Prompt Optimization",
     org: "MIT Sloan / BMW Group",
@@ -24,6 +25,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "ford-defect-detection",
+    published: false,
     slug: "ford-assembly-line-defect-detection",
     title: "Early Defect Detection on Car Assembly Lines",
     org: "MIT Sloan / Ford Motor Company",
@@ -42,6 +44,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "wildfire-crew-effects",
+    published: false,
     slug: "wildfire-crew-deployment-double-ml",
     title: "Quantifying Wildfire Crew Effects with Double ML",
     org: "MIT Operations Research Center — Research Assistant for Professor Jacquillat",
@@ -63,6 +66,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "suffolk-delay-prediction",
+    published: false,
     slug: "suffolk-construction-delay-prediction",
     title: "Predicting Construction Project Delays",
     org: "MIT Sloan / Suffolk Construction",
@@ -84,6 +88,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "richemont-watch-defects",
+    published: false,
     slug: "richemont-universal-watch-defect-detection",
     title: "Universal Defect Detection for Watch Components",
     org: "Richemont — Research & Innovation",
@@ -105,6 +110,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "societe-generale-document-ai",
+    published: false,
     slug: "societe-generale-document-structure-analysis",
     title: "Document Structure Analysis for Investment Banking",
     org: "Societe Generale — Investment Banking",
@@ -122,6 +128,7 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "ey-storm-damage",
+    published: false,
     slug: "ey-open-science-storm-damage-assessment",
     title: "Storm Damage Assessment from Satellite Imagery",
     org: "EY Open Science Data Challenge 2024",

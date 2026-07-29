@@ -37,17 +37,43 @@ export default async function ProjectPage({
   const project = await getProject(slug);
   if (!project) notFound();
 
+  const backLink = (
+    <Link
+      href="/#projects"
+      className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
+    >
+      <ArrowLeft className="h-3.5 w-3.5" />
+      Back to projects
+    </Link>
+  );
+
+  if (!project.published) {
+    return (
+      <article>
+        <Container className="py-16 sm:py-20">
+          {backLink}
+          {project.org && (
+            <p className="mb-2 text-sm font-medium tracking-wide text-accent uppercase">
+              {project.org}
+            </p>
+          )}
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            {project.title}
+          </h1>
+          <p className="mt-3 text-sm text-muted">{project.period}</p>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            This case study is a work in progress — check back soon for the full write-up.
+          </p>
+        </Container>
+      </article>
+    );
+  }
+
   return (
     <article>
       <div className="border-b border-border">
         <Container className="py-16 sm:py-20">
-          <Link
-            href="/#projects"
-            className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back to projects
-          </Link>
+          {backLink}
           {project.org && (
             <p className="mb-2 text-sm font-medium tracking-wide text-accent uppercase">
               {project.org}
