@@ -1,11 +1,11 @@
 import { Check, FileImage, Layers, Lock } from "lucide-react";
 import { bmwCaseStudy as cs } from "@/content/caseStudies/bmw";
 import type { ProjectEntry } from "@/types/content";
+import { LoopDiagram } from "../LoopDiagram";
 import { CaseStudySection, CaseStudyShell } from "../shared";
 import { DocToJson } from "./DocToJson";
 import { EvaluatorTrace } from "./EvaluatorTrace";
 import { FrontGrowth } from "./FrontGrowth";
-import { LoopDiagram } from "./LoopDiagram";
 import { ParetoExplorer } from "./ParetoExplorer";
 import { ScoreChart } from "./ScoreChart";
 
@@ -34,7 +34,7 @@ export function BmwCaseStudy({ project }: { project: ProjectEntry }) {
       </Section>
 
       <Section id="loop" title="The model stays frozen. Only the prompt evolves" lead={cs.loop.caption}>
-        <LoopDiagram steps={cs.loop.steps} />
+        <LoopDiagram steps={cs.loop.steps} centerTitle="Prompt" centerNote="the only thing that changes" />
       </Section>
 
       <Section id="evaluator" title="A score isn't enough. The grader has to explain the mistake" lead={cs.evaluator.caption}>

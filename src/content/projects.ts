@@ -130,24 +130,26 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "ey-storm-damage",
-    published: false,
+    published: true,
     slug: "ey-open-science-storm-damage-assessment",
     title: "Storm Damage Assessment from Satellite Imagery",
     org: "EY Open Science Data Challenge 2024",
     period: "2024",
     summary:
-      "A fine-tuned computer vision model for storm damage assessment that placed 2nd runner-up out of 11,000 entrants and was presented at IEEE IGARSS 2024.",
+      "A Co-DETR model that finds damaged buildings in post-hurricane satellite images. 2nd runner-up out of 11,000 entrants, presented at IEEE IGARSS 2024.",
     description:
-      "The EY Open Science Data Challenge 2024 tasked entrants with assessing storm damage from satellite imagery. I fine-tuned a computer vision model for this task, finishing 2nd runner-up out of 11,000 participants, and later presented the work at IEEE IGARSS 2024.",
+      "The EY Open Science Data Challenge 2024 tasked entrants with assessing storm damage from satellite imagery of Puerto Rico after Hurricane Maria. I built and annotated my own training set, fine-tuned a Co-DETR object detector on it, finished 2nd runner-up out of 11,000 participants, and later presented the work at IEEE IGARSS 2024.",
     problem:
       "Rapidly and accurately assessing storm damage over large areas from satellite imagery is critical for disaster response, but requires models that generalize well across varied terrain and damage types.",
     approach:
-      "Fine-tuned a computer vision model in Python on satellite imagery for storm damage assessment as an independent entry to the global competition.",
+      "Selected the most relevant image patches with color and texture features and nearest neighbors, annotated them with a YOLO-assisted loop, then fine-tuned a COCO-pretrained Co-DETR to detect buildings and classify them as damaged or undamaged, residential or commercial.",
     impact: [
       "2nd runner-up out of 11,000 entrants",
       "Presented at IEEE IGARSS 2024",
+      "Validation mAP of 0.50 across four building classes",
     ],
-    tech: ["Python", "Computer Vision", "Remote Sensing"],
+    tech: ["Python", "Computer Vision", "Object Detection", "Co-DETR", "YOLO", "Remote Sensing"],
+    links: [{ label: "IGARSS 2024 paper", href: "https://doi.org/10.1109/IGARSS53475.2024.10642784" }],
     featured: true,
   },
 ];

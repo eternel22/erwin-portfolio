@@ -1,13 +1,22 @@
 const C = 160;
 const R = 112;
 
-export function LoopDiagram({ steps }: { steps: { name: string; body: string }[] }) {
+export function LoopDiagram({
+  steps,
+  centerTitle,
+  centerNote,
+}: {
+  steps: { name: string; body: string }[];
+  centerTitle: string;
+  centerNote: string;
+}) {
+  const names = steps.map((s) => s.name);
   const angle = (k: number) => ((-90 + (k * 360) / steps.length) * Math.PI) / 180;
   const at = (a: number, r = R) => [C + r * Math.cos(a), C + r * Math.sin(a)];
 
   return (
     <div className="grid items-center gap-8 rounded-2xl border border-border bg-surface p-4 sm:p-8 md:grid-cols-[minmax(0,20rem)_1fr]">
-      <svg viewBox="0 0 320 320" className="mx-auto h-auto w-full max-w-xs" role="img" aria-label="A loop of five steps: Extract, Evaluate, Reflect, Mutate, Select, then back to Extract.">
+      <svg viewBox="0 0 320 320" className="mx-auto h-auto w-full max-w-xs" role="img" aria-label={`A loop of ${names.length} steps: ${names.join(", ")}, then back to ${names[0]}.`}>
         <circle cx={C} cy={C} r={R} fill="none" stroke="#d4d4d4" strokeWidth={2} />
         {steps.map((_, k) => {
           const mid = angle(k + 0.5);
@@ -27,10 +36,10 @@ export function LoopDiagram({ steps }: { steps: { name: string; body: string }[]
           );
         })}
         <text x={C} y={C - 8} textAnchor="middle" className="fill-foreground text-[15px] font-semibold">
-          Prompt
+          {centerTitle}
         </text>
         <text x={C} y={C + 12} textAnchor="middle" className="fill-muted text-[11px]">
-          the only thing that changes
+          {centerNote}
         </text>
       </svg>
 
