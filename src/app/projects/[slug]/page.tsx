@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Tag } from "@/components/ui/Tag";
+import { caseStudies } from "@/components/case-studies";
 import { projects } from "@/content/projects";
 
 export function generateStaticParams() {
@@ -36,6 +37,9 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = await getProject(slug);
   if (!project) notFound();
+
+  const CaseStudy = project.published ? caseStudies[slug] : undefined;
+  if (CaseStudy) return <CaseStudy project={project} />;
 
   const backLink = (
     <Link

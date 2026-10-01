@@ -3,24 +3,25 @@ import type { ProjectEntry } from "@/types/content";
 export const projects: ProjectEntry[] = [
   {
     id: "bmw-genai-eval",
-    published: false,
+    published: true,
     slug: "bmw-genai-evaluation-pipeline",
-    title: "Closed-Loop LLM Evaluation & Prompt Optimization",
+    title: "Continual Prompt Optimization for Document Extraction",
     org: "MIT Sloan / BMW Group",
     period: "Spring 2026",
     summary:
-      "A closed-loop evaluation and prompt optimization pipeline that improved LLM extraction quality by 50% over five iterations.",
+      "A GEPA-style closed loop that extracts, evaluates, and rewrites its own prompts. Our team raised mean extraction score on BMW repair orders from 0.33 to 0.83 without retraining any model.",
     description:
-      "BMW's repair-order documents need to be converted into structured JSON before downstream systems can use them, but LLM extraction quality is hard to trust without a rigorous way to measure it. As part of the MIT Sloan Generative AI Lab, I built a closed-loop system that evaluates extraction quality and automatically evolves the prompts producing it.",
+      "BMW needed structured JSON extracted from scanned, multi-section repair-order PDFs. Our team of four at the MIT Sloan Generative AI Lab built a closed-loop pipeline in which an evaluator diagnoses each extraction, a reflection model rewrites the prompt, and a Pareto frontier keeps the best candidates. No model weights are updated.",
     problem:
-      "Repair-order document extraction into structured JSON needed a way to measure quality that didn't rely on slow, inconsistent manual review, and a way to improve prompts systematically rather than by trial and error.",
+      "Repair orders are scanned, split into multiple section types, and map to deeply nested JSON. Hand-tuning prompts doesn't scale, and retraining is impractical.",
     approach:
-      "Developed a deterministic and LLM-as-judge evaluation framework in Python to score structured JSON extraction quality, then closed the loop by feeding evaluation results back into the prompts using LLM reflection and Pareto-based prompt evolution across successive iterations.",
+      "Two-tool vision extraction, a deterministic field-level scorer with an LLM diagnosis, and GEPA-style reflection, mutation, and Pareto selection. A text-first variant caches OCR so iterations are cheaper.",
     impact: [
-      "Improved extraction performance by 50% over five iterations",
-      "Replaced ad hoc prompt tweaking with a repeatable, measurable optimization loop",
+      "Team pipeline raised mean extraction score from 0.328 to 0.826 across six BMW repair orders",
+      "Pareto-frontier selection kept prompts that specialize on different documents instead of a single winner",
+      "Showed that the evaluator sets the ceiling: section-aware alignment and normalization mattered as much as prompt edits",
     ],
-    tech: ["Python", "LLM-as-Judge", "Prompt Engineering", "Pareto Optimization"],
+    tech: ["Python", "Vision LLMs", "GEPA", "Pareto Optimization", "LLM-as-Judge"],
     featured: true,
   },
   {
