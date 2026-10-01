@@ -8,8 +8,8 @@ import { site } from "@/content/site";
 
 const navLinks = [
   { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
   { label: "Projects", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
   { label: "Education", href: "/#education" },
   { label: "Skills", href: "/#skills" },
 ];

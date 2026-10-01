@@ -9,7 +9,6 @@ export interface SiteInfo {
   tagline: string;
   pitch: string;
   about: string[];
-  location: string;
   photoHref?: string;
   resumeHref: string;
   socials: SocialLink[];

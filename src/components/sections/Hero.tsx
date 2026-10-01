@@ -8,9 +8,6 @@ export function Hero() {
     <section className="border-b border-border">
       <Container className="flex flex-col-reverse items-start gap-10 py-24 sm:py-32 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col gap-6">
-          <p className="text-sm font-medium tracking-wide text-accent uppercase">
-            {site.location}
-          </p>
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
             {site.name}
           </h1>
