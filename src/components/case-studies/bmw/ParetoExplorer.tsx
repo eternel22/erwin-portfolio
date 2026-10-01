@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { IllustrativeBadge } from "../shared";
 
 type Props = {
   prompts: string[];
@@ -24,14 +25,6 @@ function cellColor(v: number) {
   const to = [27, 90, 166];
   const c = from.map((f, i) => Math.round(f + (to[i] - f) * t));
   return { bg: `rgb(${c.join(",")})`, dark: t > 0.5 };
-}
-
-export function IllustrativeBadge() {
-  return (
-    <span className="rounded-full border border-dashed border-border px-2.5 py-0.5 text-xs text-muted">
-      Illustrative example
-    </span>
-  );
 }
 
 function SubHeading({ letter, title, children }: { letter: string; title: string; children: React.ReactNode }) {

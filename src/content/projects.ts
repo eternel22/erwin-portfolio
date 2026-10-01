@@ -89,24 +89,25 @@ export const projects: ProjectEntry[] = [
   },
   {
     id: "richemont-watch-defects",
-    published: false,
+    published: true,
     slug: "richemont-universal-watch-defect-detection",
     title: "Universal Defect Detection for Watch Components",
     org: "Richemont — Research & Innovation",
     period: "Spring 2025",
     summary:
-      "A defect detection model that generalizes across watch components, enabling cost-free quality assessment.",
+      "An anomaly detector that learns what a good watch part looks like from a few dozen images, so a new component needs no defect labeling.",
     description:
-      "Richemont, the world's second-largest luxury group, needed a way to assess quality across a wide variety of watch components without building a separate model — or hiring separate labeling effort — for every single piece. I analyzed the existing labeled datasets, found labeling inconsistencies limiting model quality, and built a model that generalizes across component types.",
+      "Richemont, the world's second-largest luxury group, needed a way to assess quality across a wide variety of watch components without building a separate model — or hiring separate labeling effort — for every single piece. I found that the supposedly clean training data contained hidden defects, and built a memory-bank anomaly detector that is robust to that noise and generalizes across component types.",
     problem:
-      "Manually labeled datasets for watch components had inconsistent labeling, and building a bespoke defect model for every individual component type would be prohibitively expensive to scale.",
+      "Watch components are inspected by hand, and building a clean labeled dataset of OK and defective examples for every individual component type would be prohibitively slow to scale.",
     approach:
-      "Analyzed manually labeled watch component datasets to identify labeling issues, then developed a universal defect detection model in Python that works across any watch piece rather than requiring a model per component.",
+      "A PatchCore-style memory bank over pretrained backbone features, with SoftPatch-inspired outlier cleaning (Local Outlier Factor, multivariate Gaussian) to handle noisy training data. Served through a Dockerized FastAPI service on a GPU computer next to the acquisition machine.",
     impact: [
-      "Enabled cost-free defect assessment across watch component types",
-      "Presented findings to multiple brands within the group and delivered a production-ready solution",
+      "A useful detector for a new component from a few dozen images, with no defect labels",
+      "Robust to hidden defects in the training set",
+      "Presented a live demo to several brands within the group and delivered a production-ready service",
     ],
-    tech: ["Python", "Computer Vision"],
+    tech: ["Python", "Computer Vision", "Anomaly Detection", "PatchCore", "DINOv2", "FastAPI", "Docker", "MLflow"],
     featured: true,
   },
   {
