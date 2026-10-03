@@ -3,7 +3,7 @@
 // or `tiling` are measurements.
 
 export const richemontCaseStudy = {
-  tagline: "Richemont Research & Innovation · Spring 2025 · Data Scientist Intern",
+  tagline: "Spring 2025",
   tldr: "I built a defect detector that learns what a good watch part looks like from a few dozen images. A new component no longer needs months of defect labeling before inspection can be automated.",
 
   stats: [
@@ -83,7 +83,7 @@ export const richemontCaseStudy = {
     achieved: [
       "Tested on several components from several brands",
       "No defect labeling needed for a new component",
-      "Live demo to stakeholders across several Richemont brands",
+      "Live demo to stakeholders across several brands",
     ],
   },
 

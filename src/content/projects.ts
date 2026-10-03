@@ -90,14 +90,13 @@ export const projects: ProjectEntry[] = [
   {
     id: "richemont-watch-defects",
     published: true,
-    slug: "richemont-universal-watch-defect-detection",
+    slug: "universal-watch-defect-detection",
     title: "Universal Defect Detection for Watch Components",
-    org: "Richemont — Research & Innovation",
     period: "Spring 2025",
     summary:
       "An anomaly detector that learns what a good watch part looks like from a few dozen images, so a new component needs no defect labeling.",
     description:
-      "Richemont, the world's second-largest luxury group, needed a way to assess quality across a wide variety of watch components without building a separate model — or hiring separate labeling effort — for every single piece. I found that the supposedly clean training data contained hidden defects, and built a memory-bank anomaly detector that is robust to that noise and generalizes across component types.",
+      "A luxury watchmaking group needed a way to assess quality across a wide variety of watch components without building a separate model — or hiring separate labeling effort — for every single piece. I found that the supposedly clean training data contained hidden defects, and built a memory-bank anomaly detector that is robust to that noise and generalizes across component types.",
     problem:
       "Watch components are inspected by hand, and building a clean labeled dataset of OK and defective examples for every individual component type would be prohibitively slow to scale.",
     approach:
